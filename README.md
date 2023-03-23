@@ -21,3 +21,15 @@ DTEPs are used to derive features that are specific to each network. Finally, a 
 classification algorithm is employed to classify the different types of networks based on these features. Overall, 
 our method offers a novel approach to network classification that takes advantage of LLNA and DTEPs to identify 
 distinctive features of individual networks.
+
+# Databases
+The synthetic database can be found at ([Zenodo-synthetic-database])(https://zenodo.org/record/7749500#.ZByh0MLMJD8).
+The real database is also available under ([Zenodo-real-database])(https://zenodo.org/record/7749500#.ZByh0MLMJD8)
+
+# How to use the repository
+After downloading the repository, in datasets.py, change the following variables for your own local path in which you downloaded the databases and want to save the results:
+```
+DATASETS_PATH = "your_dataset_path/"
+TEP_OUTPUT_PATH = "result_path/TEP/"
+FEATURE_OUTPUT_PATH = "result_path/features/"
+```

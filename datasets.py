@@ -22,6 +22,8 @@ def getListOfFiles(dirName):
     return allFiles
 
 DATASETS_PATH = "/home/DATA/datasets/networks/"
+TEP_OUTPUT_PATH = "/home/DATA/results/DTEP/TEPs/"
+FEATURE_OUTPUT_PATH = "/home/DATA/results/DTEP/features/"
 
 DATASETS = {
     '4models': DATASETS_PATH + 'synthetic/synthetic_model',
@@ -51,7 +53,7 @@ CLASSES = {
     'actinobacteria': ['Corynebacterium', 'Mycobacterium', 'Streptomyces'],
 }
 
-RULES_PATH = "/home/DATA/datasets/networks/rules/"
+RULES_PATH = "./rules/"
 RULES = {
     '4models': RULES_PATH + '4models.txt',
     'noise10': RULES_PATH + 'ns10.txt',
@@ -66,9 +68,7 @@ RULES = {
     'actinobacteria': RULES_PATH + 'actinobacteria.txt',
 }
 
-SEED_PATH = "/home/DATA/datasets/networks/seeds/"
-TEP_OUTPUT_PATH = "/home/DATA/results/DTEP/TEPs/"
-FEATURE_OUTPUT_PATH = "/home/DATA/results/DTEP/features/"
+SEED_PATH = "./seeds/"
 
 class Network():
     
@@ -85,6 +85,8 @@ class Network():
         self._meta_folder = self._base_folder / "labels"
         self._graph_folder = self._base_folder / "graphs"
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        
+        self.feature_size = 6*sum(self.bins)
         
         if not self._check_exists:
             raise RuntimeError("Dataset not found.")
