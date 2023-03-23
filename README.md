@@ -23,8 +23,8 @@ our method offers a novel approach to network classification that takes advantag
 distinctive features of individual networks.
 
 # Databases
-The synthetic database can be found at ([Zenodo-synthetic-database])(https://zenodo.org/record/7749500#.ZByh0MLMJD8).
-The real database is also available under ([Zenodo-real-database])(https://zenodo.org/record/7749500#.ZByh0MLMJD8)
+The synthetic database can be found at ([Zenodo-synthetic-database])(https://doi.org/10.5281/zenodo.7749500).
+The real database is also available under ([Zenodo-real-database])(https://doi.org/10.5281/zenodo.7749514)
 
 # Prerequisites
 Install conda environment available in environment.yml by typing at the terminal:
